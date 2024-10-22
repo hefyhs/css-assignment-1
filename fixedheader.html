@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fixed Header</title>
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #4caf68; 
+    color: rgb(225, 255, 0);
+    padding: 15px;
+    text-align: center;
+    z-index: 10; /* Ensure header is on top */
+}
+
+.container {
+    display: flex;
+    margin-top: 60px; /* Space for fixed header */
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 15px;
+    position: sticky;
+    top: 0; /* Sticks to top */
+}
+
+.content {
+    flex: 1;
+    padding: 15px;
+}
+
+.floating-box {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f321ad;
+    color: yellow;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.overlapping-box {
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
+    background-color: #ff2222;
+    color: gold;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 5; /* Ensure this box is below the floating box */
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Fixed Header Created By Azeez</h1>
+    </header>
+
+    <div 
+    class="container">
+        <aside class="sidebar">
+            <h2>Sticky Sidebar</h2>
+            <p>This is the sidebar section.</p>
+        </aside>
+
+        <main class="content">
+            <h2>The Content Section</h2>
+            <p>This is the content section.</p>
+            <div class="floating-box">Floating Box</div>
+            <div class="overlapping-box">Overlapping Box</div>
+        </main>
+    </div>
+</body>
+</html>
